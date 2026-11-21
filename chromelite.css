@@ -1,0 +1,120 @@
+/* Chromelite Technologies Limited - shared stylesheet */
+:root {
+  --navy: #003153;
+  --orange: #FF6600;
+  --light: #f4f6f8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* Header + navbar */
+header {
+  padding: 16px 32px;
+  background: #fff;
+  border-bottom: 4px solid var(--orange);
+}
+header img { display: block; }
+
+nav {
+  background: var(--navy);
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 32px;
+}
+nav li { display: inline-block; }
+nav a {
+  display: block;
+  padding: 14px 22px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { background: var(--orange); color: #fff; }
+
+/* Main content */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+h1, h2 { color: var(--navy); }
+h2 {
+  border-bottom: 3px solid var(--orange);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+.intro { font-size: 1.1em; }
+
+/* Product cards: three in a row (inline-block) */
+.cards {
+  margin: 24px -1.5% 0;
+  font-size: 0; /* removes inline-block gap */
+}
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: 30.33%;
+  margin: 0 1.5% 24px;
+  padding: 20px;
+  background: var(--light);
+  border-top: 5px solid var(--orange);
+  border-radius: 4px;
+  font-size: 16px;
+}
+.card h3 { margin-top: 0; color: var(--navy); }
+
+/* Pricing table */
+table.pricing {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+table.pricing th,
+table.pricing td {
+  padding: 10px 12px;
+  border: 1px solid #c5ccd3;
+  text-align: left;
+}
+table.pricing thead th {
+  background: var(--navy);
+  color: #fff;
+}
+table.pricing td.num,
+table.pricing th.num { text-align: right; }
+table.pricing td.cat {
+  background: var(--light);
+  color: var(--navy);
+  font-weight: bold;
+  vertical-align: middle;
+}
+table.pricing tfoot td { font-weight: bold; background: var(--light); }
+table.pricing tfoot td.label { text-align: right; }
+table.pricing tfoot tr.grand td { background: var(--orange); color: #fff; }
+.note { font-size: 0.9em; color: #555; }
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 24px 32px;
+  border-top: 4px solid var(--orange);
+  text-align: center;
+}
+footer p { margin: 4px 0; }
+footer a { color: var(--orange); }
+
+/* Small screens */
+@media (max-width: 800px) {
+  .card { width: 97%; }
+  table.pricing { font-size: 0.85em; }
+}
